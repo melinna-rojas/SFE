@@ -7,7 +7,8 @@
   <link rel="icon" type="image/png" href="img/logo.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/sfe.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>SFE</title>
 </head>
 
@@ -63,7 +64,8 @@
       <!--TODO: Change aria-labelledby-->
       <!-- Nav Item - Facturación Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-file-invoice"></i>
           <span>Comprobantes</span>
         </a>
@@ -105,7 +107,8 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -122,7 +125,8 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
@@ -149,7 +153,187 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Bienvenido</h1>
           </div>
+          <div class="form-factura">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioNatural"
+                value="option1">
+              <label class="form-check-label" for="inlineRadioNatural">Natural</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioJuridica"
+                value="option2">
+              <label class="form-check-label" for="inlineRadioNatural">Juridica</label>
+            </div>
+            <form action="#">
 
+              <div class="form-group row">
+                <div class="col-4">
+                  <div class="row">
+                    <!--Numero de documento-->
+                    <label for="inputDocumento" class="col-6 col-form-label">Documento:</label>
+                    <input type="text" class="col-6 form-control" id="inputDocumento">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <!--Razon Social-->
+                    <label for="inputRazonSocial" class="col-2 col-form-label">Razon Social:</label>
+                    <input type="number" class="col-10 form-control" id="inputRazonSocial">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="form-group row">
+                <div class="col-6">
+                  <div class="row">
+                    <!--Emisor-->
+                    <label for="inputEmisor" class="col-4 col-form-label">Emisor:</label>
+                    <input type="text" class="col-8 form-control" id="inputEmisor">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <!--Fecha Vencimiento--->
+                    <label for="inputVencimiento" class="col-4 col-form-label">Fecha Vencimiento:</label>
+                    <input type="text" class="col-8 form-control" id="inputVencimiento">
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="form-group row">
+                <div class="col-6">
+                  <div class="row">
+                    <!--Tipo Moneda-->
+                    <label for="inputMoneda" class="col-4 col-form-label">Tipo de Moneda:</label>
+                    <input type="text" class="col-8 form-control" id="inputMoneda">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <!--Fecha Emision--->
+                    <label for="inputEmision" class="col-4 col-form-label">Fecha Emision:</label>
+                    <input type="text" class="col-8 form-control" id="inputEmision">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
+                  <button class="btn btn-primary"><i class="fa fa-plus"></i> Registrar</button>
+
+                </div>
+              </div>
+
+
+              <!--Tabla de Items-->
+              <div class="card shadow my-4">
+                <div class="card-header py-3">
+                  <div class="row align-items-end">
+                    <div class="col-8">
+                      <h6 class="m-0 font-weight-bold text-primary">Productos</h6>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-primary"><i class="fa fa-plus"></i> Adicionar</button>
+                      <button class="btn btn-success"><i class="fa fa-tag"></i> Editar</button>
+                      <button class="btn btn-danger"><i class="fa fa-times"></i> Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Bien/Servicio</th>
+                          <th>Gravado/Exonerado</th>
+                          <th>Unidad Medida</th>
+                          <th>Cantidad</th>
+                          <th>Descripcion</th>
+                          <th>Precio Unitario</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row mt-3 justify-content-end">
+                      <!--Subtotal-->
+                      <label for="inputSubtotal" class="col-2 col-form-label">Subtotal:</label>
+                      <input type="text" class="col-2 form-control" id="inputSubtotal">
+        
+                  </div>
+                  <div class="row justify-content-end">
+                      <!--Descuentos-->
+                      <label for="inputDescuentos" class="col-2 col-form-label">Descuentos:</label>
+                      <input type="text" class="col-2 form-control" id="inputDescuentos">
+        
+                  </div>
+                  <div class="row justify-content-end">
+                      <!--IGV-->
+                      <label for="inputIGV" class="col-2 col-form-label">IGV:</label>
+                      <input type="text" class="col-2 form-control" id="inputIGV">
+        
+                  </div>
+                  <div class="row justify-content-end">
+                      <!--Importe Total-->
+                      <label for="inputImporte" class="col-2 col-form-label">Importe Total:</label>
+                      <input type="text" class="col-2 form-control" id="inputImporte">
+        
+                  </div>
+                </div>
+              </div>
+
+
+            </form>
+
+
+
+          </div>
         </div>
         <!-- /.container-fluid -->
 
