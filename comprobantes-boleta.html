@@ -147,45 +147,49 @@
         <div class="container-fluid">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Bienvenido</h1>
+            <h1 class="h3 mb-0 text-gray-800">Boleta de Venta</h1>
           </div>
 
           <form action="#">
 
             <div class="form-group row">
-              <div class="col-4">
+              <div class="col">
                 <div class="row">
-                  <!--Numero de documento-->
-                  <label for="inputDocumento" class="col-6 col-form-label">Documento:</label>
-                  <input type="text" class="col-6 form-control" id="inputDocumento">
+                  <!--Emisor-->
+                  <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
+                  <input type="text" class="col form-control" id="inputCliente">
                 </div>
-              </div>
-              <div class="col-8">
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col">
                 <div class="row">
-                  <!--Emisor-->
-                  <label for="inputCliente" class="col-2 col-form-label">Cliente:</label>
-                  <input type="text" class="col-4 form-control" id="inputCliente">
+                  <!--Dirección-->
+                  <label for="inputDireccion" class="col-2 col-form-label">Dirección:</label>
+                  <input type="text" class="col form-control" id="inputDireccion">
                 </div>
               </div>
-              
             </div>
-
-
 
             <div class="form-group row">
-              <div class="col-6">
+              <div class="col">
                 <div class="row">
-                  <!--Tipo Moneda-->
-                  <label for="inputMoneda" class="col-4 col-form-label">Tipo de Moneda:</label>
-                  <input type="text" class="col-8 form-control" id="inputMoneda">
+                  <!--Numero de documento-->
+                  <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
+                  <input type="text" class="col-5 form-control" id="inputDocumento">
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="row">
+                  <!--Fecha-->
+                  <label for="inputFecha" class="col-4 col-form-label">Fecha:</label>
+                  <input type="text" class="col-5 form-control" id="inputFecha">
                 </div>
               </div>
             </div>
+
 
             <!--Tabla de Items-->
             <div class="card shadow my-4">
@@ -274,39 +278,38 @@
               </div>
               <div class="card-footer">
                 <div class="row mt-3 justify-content-end">
-                    <!--Subtotal-->
-                    <label for="inputSubtotal" class="col-2 col-form-label">Subtotal:</label>
-                    <input type="text" class="col-2 form-control" id="inputSubtotal">
-      
+                  <!--Subtotal-->
+                  <label for="inputSubtotal" class="col-2 col-form-label">Subtotal:</label>
+                  <input type="text" class="col-2 form-control" id="inputSubtotal">
+
                 </div>
                 <div class="row justify-content-end">
-                    <!--Descuentos-->
-                    <label for="inputDescuentos" class="col-2 col-form-label">Descuentos:</label>
-                    <input type="text" class="col-2 form-control" id="inputDescuentos">
-      
+                  <!--Descuentos-->
+                  <label for="inputDescuentos" class="col-2 col-form-label">Descuentos:</label>
+                  <input type="text" class="col-2 form-control" id="inputDescuentos">
+
                 </div>
                 <div class="row justify-content-end">
-                    <!--IGV-->
-                    
-                    <label for="inputIGV" class="col-2 col-form-label">IGV:</label>
-                    <input type="text" class="col-2 form-control" id="inputIGV">
-      
+                  <!--IGV-->
+
+                  <label for="inputIGV" class="col-2 col-form-label">IGV:</label>
+                  <input type="text" class="col-2 form-control" id="inputIGV">
+
                 </div>
                 <div class="row justify-content-end">
-                    <!--Importe Total-->
-                    <label for="inputImporte" class="col-2 col-form-label">Importe Total:</label>
-                    <input type="text" class="col-2 form-control" id="inputImporte">
-      
+                  <!--Importe Total-->
+                  <label for="inputImporte" class="col-2 col-form-label">Importe Total:</label>
+                  <input type="text" class="col-2 form-control" id="inputImporte">
+
                 </div>
               </div>
             </div>
 
-
           </form>
+          <!-- End of form -->
 
         </div>
         <!-- /.container-fluid -->
-        
 
       </div>
       <!-- End of Main Content -->
