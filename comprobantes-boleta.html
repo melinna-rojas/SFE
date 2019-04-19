@@ -157,7 +157,7 @@
                 <div class="row">
                   <!--Emisor-->
                   <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
-                  <input type="text" class="col form-control" id="inputCliente">
+                  <input type="text" class="col form-control mr-3" id="inputCliente">
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@
                 <div class="row">
                   <!--Dirección-->
                   <label for="inputDireccion" class="col-2 col-form-label">Dirección:</label>
-                  <input type="text" class="col form-control" id="inputDireccion">
+                  <input type="text" class="col form-control mr-3" id="inputDireccion">
                 </div>
               </div>
             </div>
@@ -177,22 +177,21 @@
                 <div class="row">
                   <!--Numero de documento-->
                   <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
-                  <input type="text" class="col-5 form-control" id="inputDocumento">
+                  <input type="text" class="col-5 form-control " id="inputDocumento">
                 </div>
               </div>
 
               <div class="col">
                 <div class="row">
                   <!--Fecha-->
-                  <label for="inputFecha" class="col-4 col-form-label">Fecha:</label>
+                  <label for="inputFecha" class="col-4 ml-5 col-form-label">Fecha:</label>
                   <input type="text" class="col-5 form-control" id="inputFecha">
                 </div>
               </div>
             </div>
 
-
             <!--Tabla de Items-->
-            <div class="card shadow my-4">
+            <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <div class="row align-items-end">
                   <div class="col-8">
@@ -210,13 +209,10 @@
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
-                        <th>Bien/Servicio</th>
-                        <th>Gravado/Exonerado</th>
-                        <th>Unidad Medida</th>
                         <th>Cantidad</th>
-                        <th>Descripcion</th>
-                        <th>Precio Unitario</th>
-                        <th>Total</th>
+                        <th>Descripción</th>
+                        <th>P. Unitario</th>
+                        <th>Importe</th>
                       </tr>
                     </thead>
 
@@ -226,32 +222,21 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+
                       </tr>
                       <tr>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -260,50 +245,16 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="row mt-3 justify-content-start">
-                  <!--Subtotal-->
-                  <label for="inputSub" class="col-2 col-form-label">Subtotal:</label>
-                  <input type="text" class="col-2 form-control" id="inputSub">
-                </div>
-                <div class="row justify-content-start">
-                  <!--Otros cargos-->
-                  <label for="inputCargos" class="col-2 col-form-label">Cargos:</label>
-                  <input type="text" class="col-2 form-control" id="inputCargos">
-                </div>
-                <div class="row justify-content-start">
-                  <!--Otros tributos-->
-                  <label for="inputTributos" class="col-2 col-form-label">Tributos:</label>
-                  <input type="text" class="col-2 form-control" id="inputTributos">
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="row mt-3 justify-content-end">
-                  <!--Subtotal-->
-                  <label for="inputSubtotal" class="col-2 col-form-label">Subtotal:</label>
-                  <input type="text" class="col-2 form-control" id="inputSubtotal">
 
-                </div>
-                <div class="row justify-content-end">
-                  <!--Descuentos-->
-                  <label for="inputDescuentos" class="col-2 col-form-label">Descuentos:</label>
-                  <input type="text" class="col-2 form-control" id="inputDescuentos">
 
-                </div>
-                <div class="row justify-content-end">
-                  <!--IGV-->
-
-                  <label for="inputIGV" class="col-2 col-form-label">IGV:</label>
-                  <input type="text" class="col-2 form-control" id="inputIGV">
-
-                </div>
                 <div class="row justify-content-end">
                   <!--Importe Total-->
-                  <label for="inputImporte" class="col-2 col-form-label">Importe Total:</label>
-                  <input type="text" class="col-2 form-control" id="inputImporte">
+                  <label for="inputTotal" class="col-2 col-form-label">Total:</label>
+                  <input type="text" class="col-2 mr-3 form-control" id="inputTotal">
 
                 </div>
               </div>
-            </div>
+
 
           </form>
           <!-- End of form -->
