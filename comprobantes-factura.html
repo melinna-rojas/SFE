@@ -127,11 +127,11 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#aboutModal">
                   <i class="fas fa-info fa-sm fa-fw mr-2 text-gray-400"></i>
                   Acerca de
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#helpModal">
                   <i class="fas fa-question fa-sm fa-fw mr-2 text-gray-400"></i>
                   Ayuda
                 </a>
@@ -326,6 +326,41 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+
+  <!-- Help Modal-->
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ayuda</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">En caso cuente con un problema, porfavor enviar un mensaje a
+          <a href="mailto:sfe@sfe@unmsm.edu,pe?subject=Help">sfe@unmsm.edu.pe</a>
+        </div>
+            </div>
+    </div>
+  </div>
+
+  <!-- About Modal-->
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Acerca de</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">El Sistema de Facturación Electrónica fue diseñado por 4 estudiantes de la UNMSM
+      con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
+        </div>
+            </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="js/jquery-3.4.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
