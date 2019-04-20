@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/sfe.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
   <title>SFE</title>
 </head>
 
@@ -211,12 +213,19 @@
                   <!--Fecha-->
                   <label for="inputFecha" class="col-4 ml-5 col-form-label">Fecha:</label>
                   <div class="col mr-3">
-                    <input type="text" class="form-control" id="inputFecha" required>
-                    <div class="valid-feedback">
-                      ¡Correcto!
-                    </div>
-                    <div class="invalid-feedback">
-                      Ingresar la fecha
+                    <!--input type="text" class="form-control" id="inputFecha" required>-->
+                    <div class="input-group date" id="datetimepickerF" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerF"
+                        required />
+                      <div class="input-group-append" data-target="#datetimepickerF" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                      </div>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar la fecha
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -368,6 +377,9 @@
   <script src="js/bootstrap.min.js"></script>
 
   <script src="js/validation.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="js/datepicker.js"></script>
 </body>
 
 </html>

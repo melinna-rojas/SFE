@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/sfe.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
   <title>SFE</title>
 </head>
 
@@ -235,13 +237,21 @@
                     <!--Fecha Emision--->
                     <label for="inputEmision" class="col-4 col-form-label">Fecha de Emisión:</label>
                     <div class="col-8">
-                      <input type="text" class="form-control" id="inputEmision" required>
-                      <div class="valid-feedback">
-                        ¡Correcto!
+                      <!--<input type="text" class="form-control" id="inputEmision" required>-->
+                      <div class="input-group date" id="datetimepickerFE" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerFE"
+                          required />
+                        <div class="input-group-append" data-target="#datetimepickerFE" data-toggle="datetimepicker">
+                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                        <div class="valid-feedback">
+                          ¡Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingresar la fecha de emision
+                        </div>
                       </div>
-                      <div class="invalid-feedback">
-                        Ingresar la fecha de emision
-                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -250,12 +260,19 @@
                     <!--Fecha Vencimiento--->
                     <label for="inputVencimiento" class="col-4 col-form-label">Fecha de Vencimiento:</label>
                     <div class="col-8">
-                      <input type="text" class="form-control" id="inputVencimiento" required>
-                      <div class="valid-feedback">
-                        ¡Correcto!
-                      </div>
-                      <div class="invalid-feedback">
-                        Ingresar la fecha de vencimiento
+                      <!--<input type="text" class="form-control" id="inputVencimiento" required>-->
+                      <div class="input-group date" id="datetimepickerFV" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerFV"
+                          required />
+                        <div class="input-group-append" data-target="#datetimepickerFV" data-toggle="datetimepicker">
+                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                        <div class="valid-feedback">
+                          ¡Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingresar la fecha de vencimiento
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -347,10 +364,10 @@
                     <!--Subtotal-->
                     <label for="inputMonto" class="col-1 col-form-label">Son: </label>
                     <input type="text" class="col-4 form-control" id="inputMonto" disabled>
-                    
-                      <button class="btn btn-sm btn-primary ml-3" type="submit"><i class="fa fa-check-circle"></i>
-                        Registrar Factura</button>
-                    
+
+                    <button class="btn btn-sm btn-primary ml-3" type="submit"><i class="fa fa-check-circle"></i>
+                      Registrar Factura</button>
+
                   </div>
                 </div>
               </div>
@@ -433,6 +450,10 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/validation.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="js/datepicker.js"></script>
 </body>
 
 </html>
