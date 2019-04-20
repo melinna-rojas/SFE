@@ -7,7 +7,8 @@
   <link rel="icon" type="image/png" href="img/logo.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/sfe.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>SFE</title>
 </head>
 
@@ -63,7 +64,8 @@
       <!--TODO: Change aria-labelledby-->
       <!-- Nav Item - Facturación Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-file-invoice"></i>
           <span>Comprobantes</span>
         </a>
@@ -104,7 +106,8 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-sm btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -121,7 +124,8 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
@@ -153,58 +157,107 @@
           </div>
           <div class="form-factura">
 
-            <form action="#">
+            <form class="needs-validation" action="#" novalidate>
 
-              <div class="form-group row">
-                <div class="col-4">
-                  <div class="row">
+              <div class="form-group form-row">
+                <div class="col-6">
+                  <div class="form-row">
                     <!--Numero de documento-->
-                    <label for="inputDocumento" class="col-6 col-form-label">Documento:</label>
-                    <input type="text" class="col-6 form-control" id="inputDocumento">
+                    <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="inputDocumento" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar el documento
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-8">
-                  <div class="row">
+
+                <div class="col-6">
+                  <div class="form-row">
                     <!--Razon Social-->
-                    <label for="inputMoneda" class="col-6 col-form-label">Tipo de Moneda:</label>
-                    <input type="number" class="col-6 form-control " id="inputMoneda">
+                    <label for="inputMoneda" class="col-4 col-form-label">Tipo de Moneda:</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="inputMoneda" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar el tipo de moneda
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group form-row">
                 <div class="col">
-                  <div class="row">
+                  <div class="form-row">
                     <!--Emisor-->
                     <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
-                    <input type="text" class="col form-control mr-3" id="inputCliente">
+                    <div class="col-10">
+                      <input type="text" class="form-control" id="inputCliente" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar el nombre
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group form-row">
                 <div class="col">
-                  <div class="row">
+                  <div class="form-row">
                     <!--Dirección-->
                     <label for="inputDireccion" class="col-2 col-form-label">Dirección:</label>
-                    <input type="text" class="col form-control mr-3" id="inputDireccion">
+                    <div class="col-10">
+                      <input type="text" class="col form-control" id="inputDireccion" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar la direccion
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group form-row">
                 <div class="col-6">
-                  <div class="row">
+                  <div class="form-row">
                     <!--Fecha Emision--->
                     <label for="inputEmision" class="col-4 col-form-label">Fecha de Emisión:</label>
-                    <input type="text" class="col-8 form-control" id="inputEmision">
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="inputEmision" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar la fecha de emision
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-6">
-                  <div class="row">
+                  <div class="form-row">
                     <!--Fecha Vencimiento--->
                     <label for="inputVencimiento" class="col-4 col-form-label">Fecha de Vencimiento:</label>
-                    <input type="text" class="col-8 form-control mb-3" id="inputVencimiento">
+                    <div class="col-8">
+                      <input type="text" class="form-control" id="inputVencimiento" required>
+                      <div class="valid-feedback">
+                        ¡Correcto!
+                      </div>
+                      <div class="invalid-feedback">
+                        Ingresar la fecha de vencimiento
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -269,31 +322,35 @@
                   <div class="row mt-2 mr-2 justify-content-end">
                     <!--Subtotal-->
                     <label for="inputSubtotal" class="col-2 col-form-label">Subtotal:</label>
-                    <input type="text" class="col-2 form-control" id="inputSubtotal">
+                    <input type="text" class="col-2 form-control" id="inputSubtotal" disabled>
                   </div>
 
                   <div class="row mt-1 mr-2 justify-content-end">
                     <!--Descuentos-->
                     <label for="inputDescuentos" class="col-2 col-form-label">Descuentos:</label>
-                    <input type="text" class="col-2 form-control" id="inputDescuentos">
+                    <input type="text" class="col-2 form-control" id="inputDescuentos" disabled>
                   </div>
 
                   <div class="row mt-1 mr-2 justify-content-end">
                     <!--IGV-->
                     <label for="inputIGV" class="col-2 col-form-label">IGV(18%):</label>
-                    <input type="text" class="col-2 form-control" id="inputIGV">
+                    <input type="text" class="col-2 form-control" id="inputIGV" disabled>
                   </div>
 
                   <div class="row mt-1 mr-2 justify-content-end">
                     <!--Importe Total-->
                     <label for="inputImporte" class="col-2 col-form-label">Importe Total:</label>
-                    <input type="text" class="col-2 form-control" id="inputImporte">
+                    <input type="text" class="col-2 form-control" id="inputImporte" disabled>
                   </div>
 
-                  <div class="row ml-2 mt-2 mb-3 justify-content-start">
+                  <div class="row mx-2 mt-2 mb-3 justify-content-start">
                     <!--Subtotal-->
                     <label for="inputMonto" class="col-1 col-form-label">Son: </label>
-                    <input type="text" class="col-6 form-control" id="inputMonto">
+                    <input type="text" class="col-4 form-control" id="inputMonto" disabled>
+                    
+                      <button class="btn btn-sm btn-primary ml-3" type="submit"><i class="fa fa-check-circle"></i>
+                        Registrar Factura</button>
+                    
                   </div>
                 </div>
               </div>
@@ -328,7 +385,8 @@
   </a>
 
   <!-- Help Modal-->
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -340,12 +398,13 @@
         <div class="modal-body">En caso cuente con un problema, porfavor enviar un mensaje a
           <a href="mailto:sfe@sfe@unmsm.edu,pe?subject=Help">sfe@unmsm.edu.pe</a>
         </div>
-            </div>
+      </div>
     </div>
   </div>
 
   <!-- About Modal-->
-  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -355,9 +414,9 @@
           </button>
         </div>
         <div class="modal-body">El Sistema de Facturación Electrónica fue diseñado por 4 estudiantes de la UNMSM
-      con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
+          con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
         </div>
-            </div>
+      </div>
     </div>
   </div>
 
@@ -373,6 +432,7 @@
 
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 
 </html>
