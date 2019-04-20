@@ -7,7 +7,8 @@
   <link rel="icon" type="image/png" href="img/logo.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/sfe.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>SFE</title>
 </head>
 
@@ -63,7 +64,8 @@
       <!--TODO: Change aria-labelledby-->
       <!-- Nav Item - Facturación Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-file-invoice"></i>
           <span>Comprobantes</span>
         </a>
@@ -104,9 +106,10 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Bucar por ..."
+                aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-sm btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -121,7 +124,8 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
@@ -145,55 +149,82 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4 mr-3">
             <h1 class="h3 mb-0 text-gray-800">Boleta de Venta</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
               <i class="fas fa-download fa-sm text-white-50"></i>
               Generar Reporte</a>
           </div>
 
-          <form action="#">
+          <form class="needs-validation" action="#" novalidate>
 
-            <div class="form-group row">
-              <div class="col">
-                <div class="row">
-                  <!--Emisor-->
-                  <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
-                  <input type="text" class="col form-control mr-3" id="inputCliente">
+            <div class="form-group form-row">
+              <!--Emisor-->
+              <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
+              <div class="col mr-3">
+                <input type="text" class="form-control" id="inputCliente" required>
+                <div class="valid-feedback">
+                  ¡Correcto!
+                </div>
+                <div class="invalid-feedback">
+                  Ingresar el nombre
                 </div>
               </div>
             </div>
 
-            <div class="form-group row">
-              <div class="col">
-                <div class="row">
-                  <!--Dirección-->
-                  <label for="inputDireccion" class="col-2 col-form-label">Dirección:</label>
-                  <input type="text" class="col form-control mr-3" id="inputDireccion">
+            <div class="form-group form-row">
+              <!--Dirección-->
+              <label for="inputDireccion" class="col-2 col-form-label">Dirección:</label>
+              <div class="col mr-3">
+                <input type="text" class="form-control" id="inputDireccion" required>
+                <div class="valid-feedback">
+                  ¡Correcto!
+                </div>
+                <div class="invalid-feedback">
+                  Ingresar la direccion
                 </div>
               </div>
+
             </div>
 
-            <div class="form-group row">
-              <div class="col">
-                <div class="row">
-                  <!--Numero de documento-->
+            <div class="form-group form-row">
+              <!--Numero de documento-->
+              <div class="col-6">
+                <div class="form-row">
                   <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
-                  <input type="text" class="col-5 form-control " id="inputDocumento">
+                  <div class="col mr-3">
+                    <input type="text" class="form-control" id="inputDocumento" required>
+                    <div class="valid-feedback">
+                      ¡Correcto!
+                    </div>
+                    <div class="invalid-feedback">
+                      Ingresar el documento
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
-              <div class="col">
-                <div class="row">
+
+              <div class="col-6">
+                <div class="form-row">
                   <!--Fecha-->
                   <label for="inputFecha" class="col-4 ml-5 col-form-label">Fecha:</label>
-                  <input type="text" class="col-5 form-control mb-3" id="inputFecha">
+                  <div class="col mr-3">
+                    <input type="text" class="form-control" id="inputFecha" required>
+                    <div class="valid-feedback">
+                      ¡Correcto!
+                    </div>
+                    <div class="invalid-feedback">
+                      Ingresar la fecha
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!--Tabla de Items-->
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4 mr-3">
 
               <div class="card-body">
                 <div class="table-responsive">
@@ -237,10 +268,22 @@
                   </table>
                 </div>
 
-                <div class="row justify-content-end">
+                <div class="form-row">
                   <!--Importe Total-->
-                  <label for="inputTotal" class="col-2 col-form-label">Total:</label>
-                  <input type="text" class="col-2 mr-3 form-control" id="inputTotal">
+                  <div class="col-6">
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check-circle"></i>
+                          Registrar Boleta</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row mr-1 justify-content-end">
+                      <label for="inputTotal" class="col-6 col-form-label">Total:</label>
+                      <input type="text" class="col  form-control" id="inputTotal" disabled>
+                    </div>
+                  </div>
 
                 </div>
 
@@ -275,7 +318,8 @@
   </a>
 
   <!-- Help Modal-->
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -287,12 +331,13 @@
         <div class="modal-body">En caso cuente con un problema, porfavor enviar un mensaje a
           <a href="mailto:sfe@sfe@unmsm.edu,pe?subject=Help">sfe@unmsm.edu.pe</a>
         </div>
-            </div>
+      </div>
     </div>
   </div>
 
   <!-- About Modal-->
-  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -302,9 +347,9 @@
           </button>
         </div>
         <div class="modal-body">El Sistema de Facturación Electrónica fue diseñado por 4 estudiantes de la UNMSM
-      con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
+          con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
         </div>
-            </div>
+      </div>
     </div>
   </div>
 
@@ -321,6 +366,8 @@
   <script src="js/popper.min.js"></script>
 
   <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/validation.js"></script>
 </body>
 
 </html>
