@@ -18,3 +18,7 @@ $(function () {
         locale: 'es'
     });
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

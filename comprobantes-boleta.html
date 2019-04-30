@@ -190,6 +190,22 @@
             </div>
 
             <div class="form-group form-row">
+                <!--Modo de pago-->
+                <!--TODO combobox-->
+                <label for="inputDireccion" class="col-2 col-form-label">Modo de Pago:</label>
+                <div class="col mr-3">
+                  <input type="text" class="form-control" id="inputDireccion" required>
+                  <div class="valid-feedback">
+                    ¡Correcto!
+                  </div>
+                  <div class="invalid-feedback">
+                    Ingresar la direccion
+                  </div>
+                </div>
+  
+              </div>
+
+            <div class="form-group form-row">
               <!--Numero de documento-->
               <div class="col-6">
                 <div class="form-row">
@@ -236,11 +252,19 @@
             <div class="card shadow mb-4 mr-3">
 
               <div class="card-body">
+                  <div class="row">
+                      <div class="col-12 mb-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addModal">Agregar</button>
+                          <button class="btn btn-sm btn-warning">Editar</button>
+                          <button class="btn btn-sm btn-danger">Eliminar</button>
+                      </div>
+                    </div>
                 <div class="table-responsive">
-                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
                         <th>Cantidad</th>
+                        <th>Unidad Medida</th>
                         <th>Descripción</th>
                         <th>P. Unitario</th>
                         <th>Importe</th>
@@ -248,32 +272,46 @@
                     </thead>
 
                     <tbody>
-                      <tr>
+                      <tr data-toggle="collapse" data-target="#collapseExample">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                       </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                      </tr>
-                      <tr>
+                      <div class="collapse" id="collapseExample">
+                          <div class=""></div>
+                      </div>
+                      <tr data-toggle="collapse" data-target="#collapseExample">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                       </tr>
-                      <tr>
+                      <tr data-toggle="collapse" data-target="#collapseExample">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#collapseExample">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                       </tr>
                     </tbody>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          <div class="row justify-content-end">
+                            <div class="col-2">
+                              <button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
+                              <button type="button" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></button>
+                              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-minus-circle"></i></button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
                   </table>
                 </div>
 
@@ -282,7 +320,7 @@
                   <div class="col-6">
                     <div class="row">
                       <div class="col">
-                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check-circle"></i>
+                        <button class="btn btn-sm btn-primary" type="submit" ><i class="fa fa-check-circle"></i>
                           Registrar Boleta</button>
                       </div>
                     </div>
@@ -357,6 +395,46 @@
         </div>
         <div class="modal-body">El Sistema de Facturación Electrónica fue diseñado por 4 estudiantes de la UNMSM
           con motivos de mejorar la contabilidad de diversas empresas y así contribuir con el papel de la SUNAT.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add Modal-->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Item</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+               
+                <label for="inputCantidad" class="col-4 col-form-label">Cantidad:</label>
+                <input type="text" class="col-8 form-control" id="inputCantidad">
+
+                <label for="inputUnidad" class="col-4 col-form-label">Unidad de Medida:</label>
+                <input type="text" class="col-8 form-control" id="inputUnidad">
+                <!--TODO COMBOBOX-->
+                <label for="inputDescripcion" class="col-4 col-form-label">Descripcion:</label>
+                <input type="text" class="col-8 form-control" id="inputDescripcion">
+                
+                <label for="inputValor" class="col-4 col-form-label">Valor Unitario:</label>
+                <input type="text" class="col-8 form-control" id="inputValor">
+
+                
+
+                <label for="inputMonto" class="col-4 col-form-label">Monto Total:</label>
+                <input type="text" class="col-8 form-control" id="inputMonto" disabled>
+
+
+                <button class="btn btn-sm btn-primary my-2">Aceptar</button>
+                <button class="btn btn-sm btn-danger my-2">Cancelar</button>
+          </div>
         </div>
       </div>
     </div>
