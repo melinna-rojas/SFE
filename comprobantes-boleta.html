@@ -7,10 +7,8 @@
   <link rel="icon" type="image/png" href="img/logo.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/sfe.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
   <title>SFE</title>
 </head>
 
@@ -66,8 +64,7 @@
       <!--TODO: Change aria-labelledby-->
       <!-- Nav Item - Facturación Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-          aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-file-invoice"></i>
           <span>Comprobantes</span>
         </a>
@@ -108,8 +105,7 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Bucar por ..."
-                aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Bucar por ..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-sm btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -126,8 +122,7 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
@@ -160,6 +155,21 @@
 
           <form class="needs-validation" action="#" novalidate>
 
+            <!--Numero de documento-->
+            <!--TODO: Change size of input field-->
+            <div class="form-group form-row">
+              <div class="col-6">
+                <div class="form-row">
+                  <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
+                  <div class="col mr-3">
+                    <input type="text" class="form-control" id="inputDocumento" minlength="8" maxlength="11" onkeypress="v_document(event)" required>
+                    <div class="valid-feedback">¡Correcto!</div>
+                    <div class="invalid-feedback">Ingresar documento</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="form-group form-row">
               <!--Emisor-->
               <label for="inputCliente" class="col-2 col-form-label">Señor(es):</label>
@@ -190,38 +200,23 @@
             </div>
 
             <div class="form-group form-row">
-                <!--Modo de pago-->
-                <!--TODO combobox-->
-                <label for="inputDireccion" class="col-2 col-form-label">Modo de Pago:</label>
-                <div class="col mr-3">
-                  <input type="text" class="form-control" id="inputDireccion" required>
-                  <div class="valid-feedback">
-                    ¡Correcto!
-                  </div>
-                  <div class="invalid-feedback">
-                    Ingresar la direccion
-                  </div>
+              <!--Modo de pago-->
+              <!--TODO combobox-->
+              <label for="inputDireccion" class="col-2 col-form-label">Modo de Pago:</label>
+              <div class="col mr-3">
+                <input type="text" class="form-control" id="inputDireccion" required>
+                <div class="valid-feedback">
+                  ¡Correcto!
                 </div>
-  
+                <div class="invalid-feedback">
+                  Ingresar la direccion
+                </div>
               </div>
+
+            </div>
 
             <div class="form-group form-row">
-              <!--Numero de documento-->
-              <div class="col-6">
-                <div class="form-row">
-                  <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
-                  <div class="col mr-3">
-                    <input type="text" class="form-control" id="inputDocumento" required>
-                    <div class="valid-feedback">
-                      ¡Correcto!
-                    </div>
-                    <div class="invalid-feedback">
-                      Ingresar el documento
-                    </div>
-                  </div>
 
-                </div>
-              </div>
 
 
               <div class="col-6">
@@ -231,8 +226,7 @@
                   <div class="col mr-3">
                     <!--input type="text" class="form-control" id="inputFecha" required>-->
                     <div class="input-group date" id="datetimepickerF" data-target-input="nearest">
-                      <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerF"
-                        required />
+                      <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerF" required />
                       <div class="input-group-append" data-target="#datetimepickerF" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                       </div>
@@ -252,13 +246,13 @@
             <div class="card shadow mb-4 mr-3">
 
               <div class="card-body">
-                  <div class="row">
-                      <div class="col-12 mb-3">
-                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addModal">Agregar</button>
-                          <button class="btn btn-sm btn-warning">Editar</button>
-                          <button class="btn btn-sm btn-danger">Eliminar</button>
-                      </div>
-                    </div>
+                <div class="row">
+                  <div class="col-12 mb-3">
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addModal">Agregar</button>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                  </div>
+                </div>
                 <div class="table-responsive">
                   <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -279,7 +273,7 @@
                         <td></td>
                       </tr>
                       <div class="collapse" id="collapseExample">
-                          <div class=""></div>
+                        <div class=""></div>
                       </div>
                       <tr data-toggle="collapse" data-target="#collapseExample">
                         <td></td>
@@ -301,17 +295,17 @@
                       </tr>
                     </tbody>
                     <div class="collapse" id="collapseExample">
-                        <div class="card card-body">
-                          <div class="row justify-content-end">
-                            <div class="col-2">
-                              <button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
-                              <button type="button" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></button>
-                              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-minus-circle"></i></button>
-                            </div>
-                            
+                      <div class="card card-body">
+                        <div class="row justify-content-end">
+                          <div class="col-2">
+                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-minus-circle"></i></button>
                           </div>
+
                         </div>
                       </div>
+                    </div>
                   </table>
                 </div>
 
@@ -320,11 +314,12 @@
                   <div class="col-6">
                     <div class="row">
                       <div class="col">
-                        <button class="btn btn-sm btn-primary" type="submit" ><i class="fa fa-check-circle"></i>
+                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check-circle"></i>
                           Registrar Boleta</button>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-6">
                     <div class="row mr-1 justify-content-end">
                       <label for="inputTotal" class="col-6 col-form-label">Total:</label>
@@ -365,8 +360,7 @@
   </a>
 
   <!-- Help Modal-->
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -383,8 +377,7 @@
   </div>
 
   <!-- About Modal-->
-  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -401,8 +394,7 @@
   </div>
 
   <!--Add Modal-->
-  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -413,27 +405,27 @@
         </div>
         <div class="modal-body">
           <div class="row">
-               
-                <label for="inputCantidad" class="col-4 col-form-label">Cantidad:</label>
-                <input type="text" class="col-8 form-control" id="inputCantidad">
 
-                <label for="inputUnidad" class="col-4 col-form-label">Unidad de Medida:</label>
-                <input type="text" class="col-8 form-control" id="inputUnidad">
-                <!--TODO COMBOBOX-->
-                <label for="inputDescripcion" class="col-4 col-form-label">Descripcion:</label>
-                <input type="text" class="col-8 form-control" id="inputDescripcion">
-                
-                <label for="inputValor" class="col-4 col-form-label">Valor Unitario:</label>
-                <input type="text" class="col-8 form-control" id="inputValor">
+            <label for="inputCantidad" class="col-4 col-form-label">Cantidad:</label>
+            <input type="text" class="col-8 form-control" id="inputCantidad">
 
-                
+            <label for="inputUnidad" class="col-4 col-form-label">Unidad de Medida:</label>
+            <input type="text" class="col-8 form-control" id="inputUnidad">
+            <!--TODO COMBOBOX-->
+            <label for="inputDescripcion" class="col-4 col-form-label">Descripcion:</label>
+            <input type="text" class="col-8 form-control" id="inputDescripcion">
 
-                <label for="inputMonto" class="col-4 col-form-label">Monto Total:</label>
-                <input type="text" class="col-8 form-control" id="inputMonto" disabled>
+            <label for="inputValor" class="col-4 col-form-label">Valor Unitario:</label>
+            <input type="text" class="col-8 form-control" id="inputValor">
 
 
-                <button class="btn btn-sm btn-primary my-2">Aceptar</button>
-                <button class="btn btn-sm btn-danger my-2">Cancelar</button>
+
+            <label for="inputMonto" class="col-4 col-form-label">Monto Total:</label>
+            <input type="text" class="col-8 form-control" id="inputMonto" disabled>
+
+
+            <button class="btn btn-sm btn-primary my-2">Aceptar</button>
+            <button class="btn btn-sm btn-danger my-2">Cancelar</button>
           </div>
         </div>
       </div>
@@ -455,8 +447,8 @@
   <script src="js/bootstrap.min.js"></script>
 
   <script src="js/validation.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
   <script src="js/datepicker.js"></script>
 </body>
 
