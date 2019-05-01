@@ -6,3 +6,7 @@ function v_document(e) {
     e.preventDefault();
 
 }
+
+function v_data(){
+    alert("result");
+}
