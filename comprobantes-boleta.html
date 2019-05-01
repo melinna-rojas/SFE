@@ -158,13 +158,24 @@
             <!--Numero de documento-->
             <!--TODO: Change size of input field-->
             <div class="form-group form-row">
-              <div class="col-6">
+              <div class="col-xs-12 col-md-6 my-1">
                 <div class="form-row">
                   <label for="inputDocumento" class="col-4 col-form-label">Documento:</label>
-                  <div class="col mr-3">
+                  <div class="col mr-4">
                     <input type="text" class="form-control" id="inputDocumento" minlength="8" maxlength="11" onkeypress="v_document(event)" required>
+
                     <div class="valid-feedback">¡Correcto!</div>
                     <div class="invalid-feedback">Ingresar documento</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6 my-1">
+                <div class="form-row">
+                  <div class="col mr-4">
+                    <a href="#" class="btn btn-success btn-circle btn-sm">
+                      <i class="fas fa-search"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -202,30 +213,22 @@
             <div class="form-group form-row">
               <!--Modo de pago-->
               <!--TODO combobox-->
-              <label for="inputDireccion" class="col-2 col-form-label">Modo de Pago:</label>
+              <label for="inputPago" class="col-2 col-form-label">Modo de Pago:</label>
               <div class="col mr-3">
-                <input type="text" class="form-control" id="inputDireccion" required>
-                <div class="valid-feedback">
-                  ¡Correcto!
-                </div>
-                <div class="invalid-feedback">
-                  Ingresar la direccion
-                </div>
+                <select class="form-control" id="inputPago" required>
+                  <option>Contado</option>
+                  <option>Crédito</option>
+                </select>
+                <div class="valid-feedback">¡Correcto!</div>
+                <div class="invalid-feedback">Seleccionar una opción</div>
               </div>
-
-            </div>
-
-            <div class="form-group form-row">
-
-
 
               <div class="col-6">
                 <div class="form-row">
                   <!--Fecha-->
                   <label for="inputFecha" class="col-4 ml-5 col-form-label">Fecha:</label>
                   <div class="col mr-3">
-                    <!--input type="text" class="form-control" id="inputFecha" required>-->
-                    <div class="input-group date" id="datetimepickerF" data-target-input="nearest">
+                      <div class="input-group date" id="datetimepickerF" data-target-input="nearest">
                       <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerF" required />
                       <div class="input-group-append" data-target="#datetimepickerF" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
