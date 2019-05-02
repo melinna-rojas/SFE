@@ -228,8 +228,6 @@
                 <div class="row">
                   <div class="col-12 mb-3">
                     <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addModal">Agregar</button>
-                    <button class="btn btn-sm btn-warning">Editar</button>
-                    <button class="btn btn-sm btn-danger">Eliminar</button>
                   </div>
                 </div>
                 <div class="table-responsive">
@@ -276,10 +274,9 @@
                     <div class="collapse" id="collapseExample">
                       <div class="card card-body">
                         <div class="row justify-content-end">
-                          <div class="col-2">
-                            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle"></i></button>
+                          <div>
+                            <button type="button" class="btn btn-primary btn-sm mr-2" data-toggle="modal" data-target="#addModal"><i class="fa fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-minus-circle"></i></button>
                           </div>
 
                         </div>
@@ -372,45 +369,91 @@
     </div>
   </div>
 
-  <!--Add Modal-->
+
+  <!-- AddModal-->
   <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Agregar Item</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Items</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
         <div class="modal-body">
-          <div class="row">
+          <form class="needs-validation" action="#" novalidate>
 
-            <label for="inputCantidad" class="col-4 col-form-label">Cantidad:</label>
-            <input type="text" class="col-8 form-control" id="inputCantidad">
+            <div class="form-group form-row">
+              <label for="inputCantidad" class="col-4 col-form-label">Cantidad:</label>
+              <input type="text" class="col-8 form-control mb-2" id="inputCantidad" required>
+              <div class="valid-feedback">¡Correcto!</div>
+              <div class="invalid-feedback">Ingresar cantidad</div>
+            </div>
 
-            <label for="inputUnidad" class="col-4 col-form-label">Unidad de Medida:</label>
-            <input type="text" class="col-8 form-control" id="inputUnidad">
-            <!--TODO COMBOBOX-->
-            <label for="inputDescripcion" class="col-4 col-form-label">Descripcion:</label>
-            <input type="text" class="col-8 form-control" id="inputDescripcion">
+            <div class="form-group form-row">
+              <label for="inputUnidad" class="col-4 col-form-label">Unidad de Medida:</label>
+              <select class="col-8 form-control mb-2" id="inputUnidad" required>
+                <option value="1">LATA</option>
+                <option value="2">KILO</option>
+                <option value="3">TONELADA</option>
+              </select>
+              <div class="valid-feedback">¡Correcto!</div>
+              <div class="invalid-feedback">Seleccionar Medida</div>
+            </div>
 
-            <label for="inputValor" class="col-4 col-form-label">Valor Unitario:</label>
-            <input type="text" class="col-8 form-control" id="inputValor">
+            <div class="form-group form-row">
+              <label for="inputDescripcion" class="col-4 col-form-label">Descripcion:</label>
+              <select class="col-8 form-control mb-2" id="inputDescripcion" required>
+                <option value="1">Objeto 1</option>
+                <option value="2">Objeto 2</option>
+                <option value="3">Objeto 3</option>
+              </select>
+              <div class="valid-feedback">¡Correcto!</div>
+              <div class="invalid-feedback">Seleccionar medida</div>
+            </div>
 
+            <div class="form-group form-row">
+              <label for="inputValor" class="col-4 col-form-label">Valor Unitario:</label>
+              <input type="text" class="col-8 form-control mb-2" id="inputValor" required>
+              <div class="valid-feedback">¡Correcto!</div>
+              <div class="invalid-feedback">Ingresar valor unitario</div>
+            </div>
 
+            <div class="form-group form-row">
+              <label for="inputMonto" class="col-4 col-form-label">Monto Total:</label>
+              <input type="text" class="col-8 form-control" id="inputMonto" disabled>
 
-            <label for="inputMonto" class="col-4 col-form-label">Monto Total:</label>
-            <input type="text" class="col-8 form-control" id="inputMonto" disabled>
-
-
-            <button class="btn btn-sm btn-primary my-2">Aceptar</button>
-            <button class="btn btn-sm btn-danger my-2">Cancelar</button>
-          </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" type="button" data-dismiss="modal">Aceptar</button>
+          <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Delete Modal-->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿Está seguro de eliminar el elemento?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Seleccione "Si" para eliminar la fila, sino Cancelar.</div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Si</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap core JavaScript-->
   <script src="js/jquery-3.4.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
